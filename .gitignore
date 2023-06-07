@@ -9,7 +9,7 @@ target
 dist
 jre
 lombok
-bin/
+bin/*
 .settings
 .classpath
 .project
