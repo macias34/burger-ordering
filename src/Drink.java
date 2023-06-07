@@ -3,6 +3,14 @@ public class Drink extends Product {
 
     public Drink(String type, String size) {
         super(type, -1);
+        setSize(size);
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
         this.size = size;
         char sizeChar = size.toUpperCase().charAt(0);
 
@@ -13,10 +21,6 @@ public class Drink extends Product {
             default -> setPrice(-1);
         }
 
-    }
-
-    public String getSize() {
-        return size;
     }
 
 }
