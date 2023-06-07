@@ -19,6 +19,7 @@ public class App {
         System.out.println(meal);
 
         meal = new Meal();
+        meal.getBurger().addTopping(jalapeno);
         System.out.println(meal);
 
         DeluxeBurger deluxeBurger = new DeluxeBurger();
