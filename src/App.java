@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Burger ordering!");
+        Drink drink = new Drink("Cola", "small");
+        System.out.println(drink.getPrice(4));
     }
 }
