@@ -9,7 +9,7 @@ public class Drink extends Product {
         switch (sizeChar) {
             case 'S' -> setPrice(5.50);
             case 'M' -> setPrice(7.00);
-            case 'B' -> setPrice(8.00);
+            case 'L' -> setPrice(8.00);
             default -> setPrice(-1);
         }
 

@@ -4,25 +4,25 @@ public class Meal {
     private Burger burger;
     private Drink drink;
     private SideItem sideItem;
+    private double price;
 
     public Meal(Burger burger, Drink drink, SideItem sideItem) {
         this.burger = burger;
         this.drink = drink;
         this.sideItem = sideItem;
+        price = burger.getPrice() + drink.getPrice() + sideItem.getPrice();
     }
 
     public Meal() {
-        Burger cheeseBurger = new Burger("cheeseBurger", 7);
-        Drink drink = new Drink("coke", "small");
-        SideItem fries = new SideItem("fries", 4);
-
-        this.burger = cheeseBurger;
-        this.drink = drink;
-        this.sideItem = fries;
+        this(new Burger("cheeseBurger", 7), new Drink("coke", "small"), new SideItem("fries", 4));
     }
 
     public double getPrice() {
-        return burger.getPrice() + drink.getPrice() + sideItem.getPrice();
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String toString() {
