@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Meal {
     private Burger burger;
     private Drink drink;
@@ -42,10 +44,17 @@ public class Meal {
                     """;
 
         StringBuilder toppingsString = new StringBuilder();
-        burger.getToppings()
-                .forEach((topping) -> toppingsString
-                        .append(String.format("\n%s%s -> $%.2f", " ".repeat(14), topping.getType(),
-                                topping.getPrice())));
+        ArrayList<Topping> toppings = burger.getToppings();
+
+        if (toppings.size() > 0) {
+            toppings
+                    .forEach((topping) -> toppingsString
+                            .append(String.format("\n%s%s -> $%.2f", " ".repeat(14), topping.getType(),
+                                    topping.getPrice())));
+
+        } else {
+            toppingsString.append("none");
+        }
 
         return String.format(mealString, burger.getType(), burger.getPrice(), toppingsString,
                 burger.getPriceWithToppings(), drink.getType(),
