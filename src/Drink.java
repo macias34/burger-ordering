@@ -14,4 +14,9 @@ public class Drink extends Product {
         }
 
     }
+
+    public String getSize() {
+        return size;
+    }
+
 }

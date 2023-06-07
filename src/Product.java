@@ -19,4 +19,8 @@ public class Product {
         this.price = price;
     }
 
+    public String getType() {
+        return type;
+    }
+
 }

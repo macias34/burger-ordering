@@ -10,13 +10,10 @@ public class App {
         burger.addTopping(onion);
         burger.addTopping(spicySauce);
 
-        System.out.println(burger.getPrice());
+        Drink dietCoke = new Drink("diet coke", "medium");
+        SideItem bigFries = new SideItem("big fries", 5);
 
-        DeluxeBurger deluxeBurger = new DeluxeBurger();
-
-        deluxeBurger.addTopping(pickles);
-        deluxeBurger.addTopping(onion);
-        deluxeBurger.addTopping(spicySauce);
-        System.out.println(deluxeBurger.getPrice());
+        Meal meal = new Meal(burger, dietCoke, bigFries);
+        System.out.println(meal);
     }
 }

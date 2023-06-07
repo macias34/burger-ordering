@@ -2,9 +2,11 @@ import java.util.ArrayList;
 
 public class Burger extends Product {
     private ArrayList<Topping> toppings = new ArrayList<Topping>();
+    private double priceWithToppings;
 
     public Burger(String type, double price) {
         super(type, price);
+        this.priceWithToppings = price;
     }
 
     public ArrayList<Topping> getToppings() {
@@ -17,7 +19,11 @@ public class Burger extends Product {
             return;
         }
         toppings.add(topping);
-        setPrice(this.getPrice() + topping.getPrice());
+        priceWithToppings += topping.getPrice();
+    }
+
+    public double getPriceWithToppings() {
+        return priceWithToppings;
     }
 
 }
