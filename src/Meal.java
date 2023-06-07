@@ -25,6 +25,18 @@ public class Meal {
         this.price = price;
     }
 
+    public Burger getBurger() {
+        return burger;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
+
+    public SideItem getSideItem() {
+        return sideItem;
+    }
+
     public String toString() {
         String mealString = """
                 Meal:
