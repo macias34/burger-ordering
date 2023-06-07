@@ -14,4 +14,9 @@ public class Product {
     public double getPrice(int quantity) {
         return price * quantity;
     }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
 }
