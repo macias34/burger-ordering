@@ -11,5 +11,12 @@ public class App {
         burger.addTopping(spicySauce);
 
         System.out.println(burger.getPrice());
+
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+
+        deluxeBurger.addTopping(pickles);
+        deluxeBurger.addTopping(onion);
+        deluxeBurger.addTopping(spicySauce);
+        System.out.println(deluxeBurger.getPrice());
     }
 }
